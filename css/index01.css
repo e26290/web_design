@@ -1,0 +1,197 @@
+@charset "UTF-8";
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6, p, span {
+  font-size: 16px;
+}
+
+a, input, button {
+  font-size: 14px;
+}
+
+h1, h2, h3, h4, label, input, a, p, button, span {
+  letter-spacing: 2px;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+button:focus, button:active {
+  outline: none;
+}
+
+* {
+  font-family: "Roboto", 微軟正黑體;
+  vertical-align: top;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #FFFFFF;
+}
+
+html, body {
+  background: #022031;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  position: relative;
+}
+
+.warp {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.warp .logo {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+.warp .logo img {
+  width: 240px;
+  height: auto;
+  border-radius: 0;
+}
+.warp .menu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.warp .menu .menu-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.warp .menu .menu-btn .menu-bg {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #00d4ec;
+}
+.warp .menu .menu-btn .menu-bg:hover {
+  transform-origin: center;
+  transform: scale(1.2);
+  transition-duration: 0.3s;
+}
+.warp .menu .menu-btn .menu-icon {
+  width: 20px;
+  height: 2px;
+  border-radius: 0;
+  background-color: #FFFFFF;
+  position: absolute;
+}
+.warp .menu .menu-btn .menu-icon::before, .warp .menu .menu-btn .menu-icon::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 0;
+  background-color: #FFFFFF;
+}
+.warp .menu .menu-btn .menu-icon::before {
+  position: absolute;
+  left: 0px;
+  top: -6px;
+}
+.warp .menu .menu-btn .menu-icon::after {
+  position: absolute;
+  left: 0px;
+  top: 6px;
+}
+.warp .outlink {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.warp .outlink .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 48px 8px;
+  background-color: #c52f0d;
+  border-radius: 10px 0 0 10px;
+}
+.warp .outlink .link:hover {
+  transform-origin: right;
+  transform: scale(1.2);
+  transition-duration: 0.3s;
+}
+.warp .outlink img {
+  width: 28px;
+  height: 28px;
+  border-radius: 0;
+  margin-bottom: 8px;
+}
+.warp .outlink p {
+  -webkit-writing-mode: vertical-rl;
+  font-weight: 700;
+}
+.warp .warp-bg {
+  margin-top: 6%;
+  width: 97%;
+  height: 80%;
+  border-radius: 0;
+  background: linear-gradient(210deg, #efffad, #ddb4ff);
+  border-radius: 80px;
+  color: #022031;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.warp .warp-bg h5, .warp .warp-bg h6, .warp .warp-bg a {
+  font-weight: 700;
+}
+.warp .warp-bg h1 {
+  margin: 20px 0;
+}
+.warp .warp-bg .btn-link {
+  background-color: #00d4ec;
+  color: #FFFFFF;
+  padding: 48px 120px;
+  border-radius: 100px;
+  text-decoration: none;
+  position: relative;
+  margin: 60px 0 40px 0;
+}
+.warp .warp-bg .btn-link:hover {
+  transform-origin: center;
+  transform: scale(1.2);
+  transition-duration: 0.3s;
+}
+.warp .warp-bg .btn-link i {
+  position: absolute;
+  top: 50%;
+  right: 8%;
+  transform: translateY(-50%);
+}
+.warp .warp-bg .howto {
+  text-decoration: underline;
+}/*# sourceMappingURL=index01.css.map */

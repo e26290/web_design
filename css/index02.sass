@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap')
+    
+// ColorStyle
+$red: #ff5851
+$white: #FFFFFF
+$black: #383838
+
+// 定義元件
+@mixin size($w,$h:$w,$bdrs:0)
+    width: $w
+    height: $h
+    border-radius: $bdrs
+@mixin flex($j:center,$a:center)
+    display: flex
+    justify-content: $j
+    align-items: $a
+@mixin abpos($l:initial,$t:initial)
+    position: absolute
+    left: $l
+    top: $t
+
+// TagStyle
+h1
+    font-size: 10em
+    font-weight: 900
+    line-height: 0.95em
+h2
+    font-size: 28px
+h3
+    font-size: 24px
+h4
+    font-size: 20px
+h5
+    font-size: 18px
+p
+    font-size: 1.3em
+a, input, button, h6, span
+    font-size: 0.8em
+h1, h2, h3, h4, label, input, a, p, button, span
+    letter-spacing: 0.1em
+button
+    background-color: transparent
+    border: none
+    cursor: pointer
+    &:focus, &:active
+        outline: none
+
+*
+    // border: solid 1px $black
+    font-family: 'Lato', 微軟正黑體
+    vertical-align: top
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    color: $white
+
+html, body
+    // background: green
+    color: $black
+    +size(100%)
+    position: relative
+
+.warp
+    +size(100%)
+    .fixed
+        // position: absolute
+        .nav
+            +flex(space-between)
+            background-color: $white
+            padding: 8px 48px  
+            .logo
+                +size(100px,auto)
+            .lang
+                +flex
+                li
+                    margin-left: 8px
+                    font-weight: 900
+                    a
+                        color: rgba($black,0.5)
+                .active
+                    a
+                        color: $black
+                    
+        .content
+            +size(100%)
+            +flex(space-between,center)
+            .menu
+                +size(40px,100%)
+                background-color: $white
+                position: relative
+                a
+                    position: absolute
+                    top: 50%
+                    right: 50%
+                    transform: translateX(-50%) translateY(-50%)
+                    .menu-icon
+                        +size(32px,2px)
+                        background-color: $black
+                        position: absolute
+                        &::before, &::after
+                            content: ''
+                            display: block
+                            +size(32px,2px)
+                            background-color: $black
+                        &::before
+                            +abpos(0px,-6px)
+                        &::after
+                            +abpos(0px,6px)
+                    span
+                        font-size: 10px
+                        font-weight: 700
+                        color: $black
+                        letter-spacing: -1px
+                        position: absolute
+                        top: 12px
+            .social-media
+                
+                +size(40px,100%)
+                background-color: $white
+                +flex
+                flex-direction: column
+                
+                i
+                    font-size: 14px
+                    color: $black
+                i:nth-child(n+2)
+                    margin-top: 16px
+
+        .fixed-bottom
+            height: 40px
+            background-color: $white
+    
+
+    .container-fill
+        +size(100%)
+        position: relative
+        .red-mask
+            +size(50%,170%)
+            background-color: $red
+            transform-origin: 0 50%
+        
+        .b-title
+            transition-duration: 3s
+            +flex
+            flex-direction: column
+            +size(100%)
+            position: absolute
+            top: 0
+            left: 0
+            position: fixed
+            h1
+                color: $black
+                position: relative
+                margin-bottom: 140px
+            h1::after
+                content: ''
+                display: block
+                +size(40px)
+                background-color: $red
+                border-radius: 50%
+                position: absolute
+                right: -20%
+                bottom: 5%
+            .scroll
+                +flex
+                flex-direction: column
+                padding-right: 50px
+                position: relative
+                h6
+                    transform: rotate(-90deg) translateX(-30%)
+                    display: inline-block
+                i
+                    font-size: 0.1em
+                    margin-top: 24px
+                    position: relative
+
+        .main
+            +abpos(20%,40%)
+            display: none
+            position: fixed
+            i, span, p
+                color: $black
+            .date
+                +flex(flex-start,center)
+                i
+                    margin-right: 8px
+                    color: $black
+            .text
+                p
+                    margin-bottom: 4px
+                    font-weight: 900
+                .p-white
+                    color: $white
+
+
+        .imgProduct
+            +size(100%,80vh)
+            background-image: url("https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1115&q=80")
+            background-repeat: no-repeat
+            background-position: top
+            background-size: cover
+            background-attachment: fixed
+            filter: brightness(70%)
+
+        .data
+            background-color: #eee
+            +size(100%,500px)
+                        
+
+
+        
+// 動畫部分 -------------------
+.red-mask, .main, .b-title
+    transition-duration: 2s
+.moveScale
+    transform: scaleX(2)
+.moveRight
+    transform: translateX(45%)
+.moveShow
+    @keyframes moveOpt
+        0%, 30%
+            opacity: 0
+            top: 80%
+        70%
+            opacity: 1
+            top: 40%
+
+    animation: moveOpt 1s 1 alternate
+.moveUpH1
+    transform: translate(45%,-100%)
+.moveUpText
+    transform: translateY(-600%)
+
+.scroll > i
+    @keyframes down
+        0%
+            top: 0
+        100%
+            top: 15px
+
+    animation: down 0.8s infinite alternate
+
+
+// --------------------------
+

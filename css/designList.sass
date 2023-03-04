@@ -1,0 +1,84 @@
+// ColorStyle
+$pink: #D97E9F
+$pinklight: #F2C9E0
+$blue: #3671c2
+$bluedeep: #25315b
+$white: #FFFFFF
+$black: #272735
+$yellow: #e8d420
+
+// 定義元件
+@mixin size($w,$h:$w,$bdrs:0)
+    width: $w
+    height: $h
+    border-radius: $bdrs
+@mixin flex($j:center,$a:center)
+    display: flex
+    justify-content: $j
+    align-items: $a
+@mixin abpos($l:initial,$t:initial)
+    position: absolute
+    left: $l
+    top: $t
+
+// TagStyle
+h1
+    font-size: 32px
+    font-weight: 700
+h2
+    font-size: 28px
+h3
+    font-size: 24px
+h4
+    font-size: 20px
+h5
+    font-size: 18px
+h6
+    font-size: 16px
+a, p, span, input, button
+    font-size: 14px
+h1, h2, h3, h4, label, input, a, p, button, span, th, td
+    letter-spacing: 2px
+a
+    color: $pink
+
+*
+    // border: solid 1px $white
+    font-family: 'Roboto', 微軟正黑體
+    vertical-align: top
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    color: $white
+
+html, body
+    background-color: $black
+
+.wrapper
+    +flex
+    flex-direction: column
+    margin: 48px auto
+    .container
+        margin-top: 32px
+    .txt-wrap
+        padding-left: 12px
+    .construct
+        th, td, tbody
+            border: none
+            border: solid 1px $black
+        .table-title
+            background-color: $pink
+        td
+            padding: 2px 12px
+            background-color: $bluedeep
+            a
+                line-height: 24px
+        .row-tit1>td
+            background-color: $blue
+            padding: 6px 12px
+            font-weight: 700
+        img
+            +size(auto,140px)
+        .txt-yellow
+            color: $yellow
+        

@@ -1,0 +1,91 @@
+@charset "UTF-8";
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+a, p, span, input, button {
+  font-size: 14px;
+}
+
+h1, h2, h3, h4, label, input, a, p, button, span, th, td {
+  letter-spacing: 2px;
+}
+
+a {
+  color: #D97E9F;
+}
+
+* {
+  font-family: "Roboto", 微軟正黑體;
+  vertical-align: top;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #FFFFFF;
+}
+
+html, body {
+  background-color: #272735;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 48px auto;
+}
+.wrapper .container {
+  margin-top: 32px;
+}
+.wrapper .txt-wrap {
+  padding-left: 12px;
+}
+.wrapper .construct th, .wrapper .construct td, .wrapper .construct tbody {
+  border: none;
+  border: solid 1px #272735;
+}
+.wrapper .construct .table-title {
+  background-color: #D97E9F;
+}
+.wrapper .construct td {
+  padding: 2px 12px;
+  background-color: #25315b;
+}
+.wrapper .construct td a {
+  line-height: 24px;
+}
+.wrapper .construct .row-tit1 > td {
+  background-color: #3671c2;
+  padding: 6px 12px;
+  font-weight: 700;
+}
+.wrapper .construct img {
+  width: auto;
+  height: 140px;
+  border-radius: 0;
+}
+.wrapper .construct .txt-yellow {
+  color: #e8d420;
+}/*# sourceMappingURL=designList.css.map */
