@@ -1,3 +1,10 @@
+// Loading的顯示計時器
+$(document).ready(function () {
+    setTimeout(function () {
+        $("#loading").fadeOut("200");
+    }, 2000);
+});
+
 // 偵測螢幕的高度
 $(window).scroll(function (e) {
     let winScrollTop = $(window).scrollTop();
